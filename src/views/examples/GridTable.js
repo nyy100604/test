@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { UncontrolledAlert } from "reactstrap";
+import { UncontrolledTooltip, Button } from "reactstrap";
 const GridTable = () => {
   const isBlockchain = {
     O: 1,
@@ -27,11 +27,11 @@ const GridTable = () => {
 
   const inputOne = (e) => {
     if (e.target.value == isBlockchain.O) {
-      document.querySelector(".pp1").innerText = `正確`;
+      document.querySelector(".pp1").innerText = `✓正確`;
     } else {
       document.querySelector(
         ".pp1"
-      ).innerHTML = `<a href="https://www.youtube.com/watch?v=Lc7DzsKQaNw&list=RDLc7DzsKQaNw&start_radio=1">錯誤，請看教學</a>`;
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   // <div className="vedio1"></div>
@@ -39,87 +39,109 @@ const GridTable = () => {
   const inputTwo = (e) => {
     setTwo(e.target.value);
     if (e.target.value == isBlockchain.T) {
-      document.querySelector(".pp2").innerText = `正確`;
+      document.querySelector(".pp2").innerText = `✓正確`;
     } else {
-      document.querySelector("a.learning").innerText = "教學資源";
-      setTwo("http://doyouneedablockchain.com/");
+      document.querySelector(
+        ".pp2"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputThree = (e) => {
     setThree(e.target.value);
     if (e.target.value == isBlockchain.Th) {
-      setThree("正確");
+      document.querySelector(".pp3").innerText = `✓正確`;
     } else {
-      setThree("不正確");
+      document.querySelector(
+        ".pp3"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputFour = (e) => {
     setFour(e.target.value);
     if (e.target.value == isBlockchain.F) {
-      setFour("正確");
+      document.querySelector(".pp4").innerText = `✓正確`;
     } else {
-      setFour("不正確");
+      document.querySelector(
+        ".pp4"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputFive = (e) => {
     setFive(e.target.value);
     if (e.target.value == isBlockchain.Fi) {
-      setFive("正確");
+      document.querySelector(".pp5").innerText = `✓正確`;
     } else {
-      setFive("不正確");
+      document.querySelector(
+        ".pp5"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputSix = (e) => {
     setSix(e.target.value);
     if (e.target.value == isBlockchain.S) {
-      setSix("正確");
+      document.querySelector(".pp6").innerText = `✓正確`;
     } else {
-      setSix("不正確");
+      document.querySelector(
+        ".pp6"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputSeven = (e) => {
     setSeven(e.target.value);
     if (e.target.value == isBlockchain.Se) {
-      setSeven("正確");
+      document.querySelector(".pp7").innerText = `✓正確`;
     } else {
-      setSeven("不正確");
+      document.querySelector(
+        ".pp7"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputEight = (e) => {
     setEight(e.target.value);
     if (e.target.value == isBlockchain.E) {
-      setEight("正確");
+      document.querySelector(".pp8").innerText = `✓正確`;
     } else {
-      setEight("不正確");
+      document.querySelector(
+        ".pp8"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputNine = (e) => {
     setNine(e.target.value);
     if (e.target.value == isBlockchain.N) {
-      setNine("正確");
+      document.querySelector(".pp9").innerText = `✓正確`;
     } else {
-      setNine("不正確");
+      document.querySelector(
+        ".pp9"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
   const inputTen = (e) => {
     setTen(e.target.value);
-    if (e.target.value == isBlockchain.Te) {
-      setTen("正確");
+    if (e.target.value == isBlockchain.T) {
+      document.querySelector(".pp10").innerText = `✓正確`;
     } else {
-      setTen("不正確");
+      document.querySelector(
+        ".pp10"
+      ).innerHTML = `<a href="https://www.twblogs.net/a/5ef693c3df18513b27376d3b/?lang=zh-cn">✗ 請看教學</a>`;
     }
   };
-  // const submitHandler = (e) => {
-  //   e.preventDefault();
-  //   if (One !== isBlockchain.O) {
-  //     let learnResources = document.querySelector("td", "a");
-  //     learnResources.innerText = "Hi";
-  //   }
-  // };
+
   return (
     <div class="aaa">
       <form action="" method="">
-        <h1>你的專案真的需要區塊鏈嗎？</h1> <br />
+        <Button
+          color="secondary"
+          id="top"
+          style={{ width: "50%", paddingTop: "1rem" }}
+        >
+          <span style={{ fontSize: "1.5rem" }}>你的專案真的需要區塊鏈嗎？</span>
+        </Button>
+        {` `}
+        <UncontrolledTooltip placement="top" target="top" delay={0}>
+          1 為正面，5 為反面
+        </UncontrolledTooltip>
+
         <table>
           <tr>
             <th></th>
@@ -137,7 +159,8 @@ const GridTable = () => {
               <span>需</span>要資料庫
             </td>
             <td>
-              <p className="pp1"></p>
+              <span className="pp1">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -151,7 +174,8 @@ const GridTable = () => {
             </td>
             <td>
               {" "}
-              <p className="pp2"></p>
+              <span className="pp2">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -173,6 +197,8 @@ const GridTable = () => {
               <span>可</span>有多人來紀錄與存取
             </td>
             <td>
+              <span className="pp3">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -185,6 +211,8 @@ const GridTable = () => {
               </select>
             </td>
             <td>
+              <span className="pp4">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -205,6 +233,8 @@ const GridTable = () => {
               使用者<span>有</span>可信的第三方
             </td>
             <td>
+              <span className="pp5">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -217,6 +247,8 @@ const GridTable = () => {
               </select>
             </td>
             <td>
+              <span className="pp6">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -237,6 +269,8 @@ const GridTable = () => {
               系統參與者<span>相信</span>彼此
             </td>
             <td>
+              <span className="pp7">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -249,6 +283,8 @@ const GridTable = () => {
               </select>
             </td>
             <td>
+              <span className="pp8">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -269,6 +305,8 @@ const GridTable = () => {
               <span>接受</span>數據被公開驗證
             </td>
             <td>
+              <span className="pp9">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
@@ -281,6 +319,8 @@ const GridTable = () => {
               </select>
             </td>
             <td>
+              <span className="pp10">作答</span>
+              <br />
               <select
                 class="form-select"
                 aria-label="Default select example"
